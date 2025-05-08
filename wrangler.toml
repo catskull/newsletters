@@ -2,3 +2,8 @@ name = "newsletters"
 main = "src/worker.js"
 workers_dev = true
 compatibility_date = "2000-01-01"
+
+[vars]
+DOMAIN = "catskull.net"
+GITHUB_OWNER = "catskull"
+GITHUB_REPO = "catskull.github.io"
