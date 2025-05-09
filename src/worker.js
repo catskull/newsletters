@@ -11,7 +11,7 @@ export default {
         return btoa(binary);
       }
 
-      if (message.from.split('@')[1] !== env.DOMAIN) {
+      if (message.from !== env.EMAIL) {
         message.setReject("Address not allowed");  
         return;
       }
