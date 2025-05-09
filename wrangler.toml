@@ -6,5 +6,4 @@ compatibility_date = "2000-01-01"
 [vars]
 EMAIL = "bro@catskull.net"
 GITHUB_OWNER = "catskull"
-GITHUB_REPO = "catskull.github.io"
 GITHUB_BRANCH = "master"

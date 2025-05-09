@@ -21,7 +21,7 @@ export default {
 
       const repo = {
         owner: env.GITHUB_OWNER,
-        repo: env.GITHUB_REPO,
+        repo: `${env.GITHUB_OWNER}.github.io`,
         headers: {
           'X-GitHub-Api-Version': '2022-11-28'
         }
