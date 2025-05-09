@@ -33,7 +33,7 @@ export default {
       // get latest master commit sha so we can create a branch
       const { data: ref } = await octokit.request('GET /repos/{owner}/{repo}/git/ref/{ref}', {
         ...repo,
-        ref: 'heads/master',
+        ref: `heads/${env.GITHUB_BRANCH}`,
       });
       const latestMasterCommitSha = ref.object.sha;
 
@@ -111,7 +111,7 @@ ${body}
         ...repo,
         title: `Newsletter: ${messageId}`,
         head: `newsletter-${messageId}`,
-        base: 'master',
+        base: `${env.GITHUB_BRANCH}`,
         body: `Automatically created from a message from ${email.from.address} with subject: ${email.subject}`,
       });
 
